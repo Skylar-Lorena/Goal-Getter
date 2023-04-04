@@ -26,3 +26,7 @@ addButton.addEventListener('click', (event) => {
 
 // function to add a goal to the database
 function addGoal(goal) {
+    // get current goals from database
+  fetch('db.json')
+  .then(response => response.json())
+  .then(data => {
