@@ -6,3 +6,5 @@ const addButton = document.querySelector('button[type="submit"]');
 
 // add event listener to form submit button
 addButton.addEventListener('click', (event) => {
+    // prevent default form submission behavior
+  event.preventDefault();
