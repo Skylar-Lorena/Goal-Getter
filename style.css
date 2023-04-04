@@ -1,11 +1,62 @@
-   /* Center the container vertically */
-   #container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
- /* Add some margin to the form */
- form {
-    margin-top: 2rem;
-}
+/* set background color */
+body {
+    background-color: #ffe6cc;
+  }
+  
+  /* center container */
+  #container {
+    margin-top: 50px;
+  }
+  
+  /* style form inputs */
+  .form-group label {
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #ff9933;
+  }
+  
+  .form-control:focus {
+    border-color: #ff6600;
+    box-shadow: none;
+  }
+  
+  /* style submit button */
+  .btn-primary {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    border-radius: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff8533;
+    border-color: #ff8533;
+  }
+  
+  /* add some spacing between elements */
+  .form-group:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  /* style the form header */
+  h1 {
+    font-weight: bold;
+    color: #ff6600;
+    text-shadow: 1px 1px #ffe6cc;
+    margin-bottom: 50px;
+  }
+  
+  /* style the form border */
+  .form-border {
+    border: 2px solid #ff6600;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #ff8533;
+  }
+  
