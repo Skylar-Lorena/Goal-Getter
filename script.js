@@ -8,3 +8,8 @@ const addButton = document.querySelector('button[type="submit"]');
 addButton.addEventListener('click', (event) => {
     // prevent default form submission behavior
   event.preventDefault();
+    // get form values
+    const goalName = goalNameInput.value;
+    const description = descriptionInput.value;
+    const deadline = deadlineInput.value;
+    
