@@ -45,3 +45,9 @@ function addGoal(goal) {
     .then(data => console.log(data))
     .catch(error => console.error(error));
 }
+// function to clear form inputs
+function clearForm() {
+    goalNameInput.value = '';
+    descriptionInput.value = '';
+    deadlineInput.value = '';
+  }
