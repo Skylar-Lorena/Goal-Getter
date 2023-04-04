@@ -5,3 +5,7 @@
     align-items: center;
     height: 100vh;
 }
+ /* Add some margin to the form */
+ form {
+    margin-top: 2rem;
+}
