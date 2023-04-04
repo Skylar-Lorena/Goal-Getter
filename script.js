@@ -12,4 +12,10 @@ addButton.addEventListener('click', (event) => {
     const goalName = goalNameInput.value;
     const description = descriptionInput.value;
     const deadline = deadlineInput.value;
-    
+   // create goal object
+  const goal = {
+    name: goalName,
+    description: description,
+    deadline: deadline
+  };
+ 
