@@ -23,3 +23,6 @@ addButton.addEventListener('click', (event) => {
   // clear form inputs
   clearForm();
 });
+
+// function to add a goal to the database
+function addGoal(goal) {
