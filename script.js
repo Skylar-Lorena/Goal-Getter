@@ -18,4 +18,6 @@ addButton.addEventListener('click', (event) => {
     description: description,
     deadline: deadline
   };
- 
+   // add goal to database
+   addGoal(goal);
+  
