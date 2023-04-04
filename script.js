@@ -30,3 +30,5 @@ function addGoal(goal) {
   fetch('db.json')
   .then(response => response.json())
   .then(data => {
+    // add new goal to goals array
+    data.goals.push(goal);
