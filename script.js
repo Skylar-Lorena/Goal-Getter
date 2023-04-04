@@ -32,3 +32,16 @@ function addGoal(goal) {
   .then(data => {
     // add new goal to goals array
     data.goals.push(goal);
+     // update database with new goals array
+     return fetch('db.json', {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
