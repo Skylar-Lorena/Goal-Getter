@@ -1,67 +1,70 @@
-// define form elements
-const goalNameInput = document.getElementById('goalName');
-const descriptionInput = document.getElementById('description');
-const deadlineInput = document.getElementById('deadline');
-const addButton = document.querySelector('button[type="submit"]');
+// Get the form element and add a submit event listener
+const form = document.querySelector('form');
+form.addEventListener('submit', addGoal);
 
-// add event listener to form submit button
-addButton.addEventListener('click', (event) => {
-    // prevent default form submission behavior
+// Get the ul element where goals will be displayed
+const goalsList = document.getElementById('goalsList');
+
+// Function to handle form submit and add goal to the database
+function addGoal(event) {
   event.preventDefault();
-    // get form values
-    const goalName = goalNameInput.value;
-    const description = descriptionInput.value;
-    const deadline = deadlineInput.value;
-   // create goal object
-  const goal = {
-    name: goalName,
-    description: description,
-    deadline: deadline
-  };
-   // add goal to database
-   addGoal(goal);
-  // clear form inputs
-  clearForm();
-});
+  
+  // Get the input values
+  const goalNameInput = document.getElementById('goalName');
+  const descriptionInput = document.getElementById('description');
+  const deadlineInput = document.getElementById('deadline');
+  const goalName = goalNameInput.value;
+  const description = descriptionInput.value;
+  const deadline = deadlineInput.value;
 
-// function to add a goal to the database
-function addGoal(goal) {
-    // get current goals from database
-  fetch('http://localhost:3000/goals')
+  // Create a new goal object
+  const goal = { goalName, description, deadline };
+
+  // Make a POST request to the server to add the goal to the database
+  fetch('http://localhost:3000/goals', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(goal)
+  })
   .then(response => response.json())
   .then(data => {
-    // add new goal to goals array
-    data.goals.push(goal);
-     // update database with new goals array
-     return fetch('http://localhost:3000/goals', {
-        method: 'PUT',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-}
-function getGoals() {
-  fetch('http://localhost:3000/goals')
-    .then(response => response.json())
-    .then(data => {
-      const goalsList = document.getElementById('goalsList');
-      goalsList.innerHTML = '';
-      data.forEach(goal => {
-        const li = document.createElement('li');
-        li.appendChild(document.createTextNode(`${goal.name} - ${goal.description} - ${goal.deadline}`));
-        goalsList.appendChild(li);
-      });
-    })
-    .catch(error => console.error(error));
-}
-// function to clear form inputs
-function clearForm() {
+    // Add the new goal to the list
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <h3>${data.goalName}</h3>
+      <p>${data.description}</p>
+      <p>${data.deadline}</p>
+    `;
+    goalsList.appendChild(li);
+
+    // Clear the input fields
     goalNameInput.value = '';
     descriptionInput.value = '';
     deadlineInput.value = '';
-  }
+  })
+  .catch(error => console.error(error));
+}
+
+// Function to get all goals from the database and display them on the page
+function getGoals() {
+  fetch('http://localhost:3000/goals')
+  .then(response => response.json())
+  .then(goals => {
+    // Loop through the goals and add them to the list
+    goals.forEach(goal => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <h3>${goal.goalName}</h3>
+        <p>${goal.description}</p>
+        <p>${goal.deadline}</p>
+      `;
+      goalsList.appendChild(li);
+    });
+  })
+  .catch(error => console.error(error));
+}
+
+// Call the getGoals function when the page loads to display existing goals
+getGoals();
