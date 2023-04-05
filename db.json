@@ -5,6 +5,12 @@
       "description": "Eat well and drink water. Work out",
       "deadline": "2023-04-28",
       "id": 1
+    },
+    {
+      "goalName": "Keep sane",
+      "description": "Go out. Take walks. Travel and Be Happy",
+      "deadline": "2023-04-28",
+      "id": 2
     }
   ]
 }
