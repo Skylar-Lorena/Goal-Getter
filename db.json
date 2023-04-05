@@ -1,4 +1,10 @@
 {
-    "goals": []
-  }
-  
+  "goals": [
+    {
+      "goalName": "Keep fit",
+      "description": "Eat well and drink water. Work out",
+      "deadline": "2023-04-28",
+      "id": 1
+    }
+  ]
+}
