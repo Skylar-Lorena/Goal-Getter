@@ -45,6 +45,20 @@ function addGoal(goal) {
     .then(data => console.log(data))
     .catch(error => console.error(error));
 }
+function getGoals() {
+  fetch('http://localhost:3000/goals')
+    .then(response => response.json())
+    .then(data => {
+      const goalsList = document.getElementById('goalsList');
+      goalsList.innerHTML = '';
+      data.forEach(goal => {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${goal.name} - ${goal.description} - ${goal.deadline}`));
+        goalsList.appendChild(li);
+      });
+    })
+    .catch(error => console.error(error));
+}
 // function to clear form inputs
 function clearForm() {
     goalNameInput.value = '';
