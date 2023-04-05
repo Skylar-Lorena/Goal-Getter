@@ -27,13 +27,13 @@ addButton.addEventListener('click', (event) => {
 // function to add a goal to the database
 function addGoal(goal) {
     // get current goals from database
-  fetch('db.json')
+  fetch('http://localhost:3000/goals')
   .then(response => response.json())
   .then(data => {
     // add new goal to goals array
     data.goals.push(goal);
      // update database with new goals array
-     return fetch('db.json', {
+     return fetch('http://localhost:3000/goals', {
         method: 'PUT',
         body: JSON.stringify(data),
         headers: {
