@@ -32,6 +32,7 @@ function addGoal(event) {
   .then(data => {
     // Add the new goal to the list
     const li = document.createElement('li');
+    li.classList.add('card');
     li.innerHTML = `
       <h3>${data.goalName}</h3>
       <p>${data.description}</p>
@@ -55,6 +56,7 @@ function getGoals() {
     // Loop through the goals and add them to the list
     goals.forEach(goal => {
       const li = document.createElement('li');
+      li.classList.add('card');
       li.innerHTML = `
         <h3>${goal.goalName}</h3>
         <p>${goal.description}</p>
