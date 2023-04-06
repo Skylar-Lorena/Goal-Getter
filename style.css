@@ -86,4 +86,26 @@ body {
     color:red;
   }
   
-  
+  .hero-section {
+    background-image:url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 0;
+    }
+
+    .hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    }
+
+    .hero-section p {
+    font-size: 24px;
+    margin-bottom: 50px;
+    }
+
+    .hero-section .btn {
+    font-size: 20px;
+    font-weight: bold;
+    }
