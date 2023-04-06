@@ -153,6 +153,6 @@ body {
       margin-top: 10px;
     }
     
-    h2 {
-      float: right;
+    .title{
+      color: #ff6600;
     }
