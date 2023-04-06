@@ -109,3 +109,10 @@ body {
     font-size: 20px;
     font-weight: bold;
     }
+    .btn-lg {
+      font-size: 24px;
+      padding: 12px 30px;
+      width: 1050px;
+      margin: auto;
+      align-items: center;
+    }
