@@ -86,7 +86,7 @@ body {
   }
   
   .hero-section {
-    background-image: url("https://images.unsplash.com/photo-1514782831304-632d84503f6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+          background-image: url("https://images.unsplash.com/photo-1514782831304-632d84503f6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
 
     background-size: cover;
     background-position: center;
@@ -119,49 +119,4 @@ body {
     .container{
       background-image:url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80");
 
-    }
-    #lists {
-      background-color: #f5f5f5;
-      margin-top: 50px;
-      padding: 50px 0;
-    }
-    
-    #lists h1 {
-      color: #337ab7;
-      text-align: center;
-    }
-    
-    #goalsList {
-      list-style: none;
-      padding-left: 0;
-    }
-    
-    #goalsList li {
-      margin-bottom: 20px;
-    }
-    
-    #goalsList li h3 {
-      color: #337ab7;
-      margin-bottom: 5px;
-    }
-    
-    #goalsList li p {
-      margin: 0;
-    }
-    #goalsList {
-      float: right;
-      margin-top: 10px;
-    }
-    
-    .title{
-      color: #ff6600;
-    }
-    .list-items{
-      display: flex;
-      float: right;
-      justify-content: space-between;
-    }
-    #myList{
-      display: flex;
-      justify-content: right;
     }
