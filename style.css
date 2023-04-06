@@ -8,24 +8,66 @@ body {
     margin-top: 50px;
     align-items: center;
   }
-  
   /* style form inputs */
-  .form-group label {
-    font-weight: bold;
-    color: #ff6600;
-  }
-  
-  .form-control {
-    border-radius: 0;
-    box-shadow: none;
-    border-color: #ff9933;
-  }
-  
-  .form-control:focus {
-    border-color: #ff6600;
-    box-shadow: none;
-  }
-  
+#lists .form-group label {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+#lists .form-control {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #ff9933;
+}
+
+#lists .form-control:focus {
+  border-color: #ff6600;
+  box-shadow: none;
+}
+
+/* style submit button */
+#lists .btn-primary {
+  background-color: #ff6600;
+  border-color: #ff6600;
+  border-radius: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#lists .btn-primary:hover {
+  background-color: #ff8533;
+  border-color: #ff8533;
+}
+
+/* add some spacing between elements */
+#lists .form-group:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/* style the form header */
+#lists h1 {
+  font-weight: bold;
+  color: #ff6600;
+  text-shadow: 1px 1px #ffe6cc;
+  margin-bottom: 50px;
+}
+
+/* style the form border */
+#lists .form-border {
+  border: 2px solid #ff6600;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #ff8533;
+}
+
+/* style the list title */
+#lists .title {
+  font-weight: bold;
+  color: #ff6600;
+  text-shadow: 1px 1px #ffe6cc;
+  margin-bottom: 30
+
+}  
   /* style submit button */
   .btn-primary {
     background-color: #ff6600;
@@ -88,7 +130,7 @@ body {
   }
   
   .hero-section {
-          background-image: url("https://images.unsplash.com/photo-1514782831304-632d84503f6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+    background-image: url("https://images.unsplash.com/photo-1514782831304-632d84503f6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
 
     background-size: cover;
     background-position: center;
