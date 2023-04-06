@@ -156,3 +156,12 @@ body {
     .title{
       color: #ff6600;
     }
+    .list-items{
+      display: flex;
+      float: right;
+      justify-content: space-between;
+    }
+    #myList{
+      display: flex;
+      justify-content: right;
+    }
